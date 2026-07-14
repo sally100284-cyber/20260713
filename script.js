@@ -1,21 +1,14 @@
-const b = document.getElementById("play");
-const a = document.getElementById("audio");
-
-b.onclick = () => {
-
-    if(a.paused){
-
-        a.play();
-        b.textContent = "❚❚";
-
-    }else{
-
-        a.pause();
-        b.textContent = "▶";
-
-    }
-};
-
-a.onended = () => {
-    b.textContent = "▶";
-};
+const playBtn = document.getElementById("play");
+const audio = document.getElementById("audio");
+playBtn.addEventListener("click", () => {
+  if(audio.paused){
+    audio.play();
+    playBtn.textContent = "❚❚";
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶";
+  }
+});
+audio.addEventListener("ended", () => {
+  playBtn.textContent = "▶";
+});

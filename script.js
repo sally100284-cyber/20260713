@@ -3,12 +3,12 @@ const audio = document.getElementById("audio");
 
 playBtn.addEventListener("click", () => {
 
-    if(audio.paused){
+    if (audio.paused) {
 
         audio.play();
         playBtn.textContent = "❚❚";
 
-    }else{
+    } else {
 
         audio.pause();
         playBtn.textContent = "▶";

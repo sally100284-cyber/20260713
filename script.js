@@ -1,24 +1,21 @@
 const b = document.getElementById("play");
 const a = document.getElementById("audio");
 
-b.innerHTML = "▶";
-
 b.onclick = () => {
 
-    if (a.paused) {
+    if(a.paused){
 
         a.play();
-        b.innerHTML = "❚❚";
+        b.textContent = "❚❚";
 
-    } else {
+    }else{
 
         a.pause();
-        b.innerHTML = "▶";
+        b.textContent = "▶";
 
     }
-
 };
 
 a.onended = () => {
-    b.innerHTML = "▶";
+    b.textContent = "▶";
 };
